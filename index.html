@@ -4,41 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOKEPON! 👌</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>PetWars 👌</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="output.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <section id="seleccionar-mascota">
-      <h1>MOKEPON</h1>
-      <h2 class="subtitulo">Elige tu mascota:</h2>
+    <section id="seleccionar-mascota" class="seccion">
+      <h1>PetWars</h1>
+
+      <h2 class="subtitulo">Elige a tu compañero de batalla</h2>
 
       <div class="tarjeta">
-        <input type="radio" name="mascota" id="michu" />
+        <input type="radio" name="mascota" id="michu" class="hidden peer" />
         <label class="tarjeta-de-mokepon" for="michu">
-          <p>Michu</p>
-          <img src="./assets/michu.png" alt="Vector de gatico" />
+          <img src="./assets/michu.png" alt="Imagen de Michu, un gatico" />
         </label>
-        <!--El atributo name es agrupar los mismos input-->
 
-        <input type="radio" name="mascota" id="firulais" />
+        <input type="radio" name="mascota" id="firulais" class="hidden peer" />
         <label class="tarjeta-de-mokepon" for="firulais">
-          <p>Firulais</p>
-          <img src="./assets/firulais.png" alt="Vector de perrito" />
+          <img
+            src="./assets/firulais.png"
+            alt="Imagen de Firulais, un perrito"
+          />
         </label>
 
-        <input type="radio" name="mascota" id="manchas" />
+        <input type="radio" name="mascota" id="manchas" class="hidden peer" />
         <label class="tarjeta-de-mokepon" for="manchas">
-          <p>Manchas</p>
-          <img src="./assets/manchas.png" alt="Vector de vaquita" />
+          <img
+            src="./assets/manchas.png"
+            alt="Imagen de Manchas, una vaquita"
+          />
         </label>
       </div>
+      <div class="mb-8">
+        <label for="nombre-mascota" class="block text-lg text-gray-600 mb-2"
+          >Ponle un nombre:</label
+        >
+        <input
+          type="text"
+          id="nombre-mascota"
+          placeholder="Ej. Rayo, Luna, Max"
+          class="w-72 px-4 py-2 border-2 border-purple-300 rounded-lg focus:outline-none focus:border-purple-500 transition-all duration-300"
+        />
+      </div>
 
-      <button id="boton-mascota">Seleccionar</button>
+      <button id="boton-mascota">¡Listo para la batalla!</button>
     </section>
 
-    <section id="seleccionar-ataque">
-      <h1>MOKEPON</h1>
+    <section id="seleccionar-ataque" class="seccion">
+      <h1>PetWars</h1>
 
       <h2 class="subtitulo">Elige tu ataque:</h2>
 
@@ -50,25 +65,23 @@
 
       <div id="mensajes">
         <p id="resultado">¡Mucha suerte!</p>
-        <section id="reiniciar">
-          <button id="boton-reiniciar">Reiniciar</button>
-        </section>
       </div>
-
       <div class="ataques">
         <div class="ataques-jugador">
-          <p id="vidas-jugador">3</p>
-          <p id="mascota-jugador"></p>
+          <p id="vidas-jugador" class="vidas">3</p>
+          <p id="mascota-jugador" class="nombre-mascota"></p>
           <div id="ataques-del-jugador"></div>
         </div>
 
         <div class="ataques-enemigo">
-          <p id="vidas-enemigo">3</p>
-          <p id="mascota-enemigo"></p>
+          <p id="vidas-enemigo" class="vidas">3</p>
+          <p id="mascota-enemigo" class="nombre"></p>
           <div id="ataques-del-enemigo"></div>
         </div>
       </div>
+      <button id="boton-reiniciar" class="hidden">Volver a jugar</button>
     </section>
-    <script src="./js/mokepon.js"></script>
+
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
