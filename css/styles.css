@@ -14,8 +14,8 @@ body {
   min-height: 100vh;
 }
 
-#seleccionar-mascota {
-  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4;
+#seleccionar-mascota, #seleccionar-ataque {
+  @apply grid grid-rows-3 items-center text-center bg-gray-100 p-4 gap-6;
 }
 
 h1 {
@@ -38,28 +38,28 @@ h1 {
   @apply bg-[#a09cd2] w-44 h-48 font-medium text-lg box-border cursor-pointer flex flex-col items-center justify-center rounded-lg m-2 transition-transform duration-300 hover:scale-105 border-2 border-transparent hover:border-purple-600 peer-checked:border-2 peer-checked:border-gray-800;
 }
 
-/* input[type="radio"]:checked + .tarjeta-de-mokepon {
+input[type="radio"]:checked + .tarjeta-de-mokepon {
   border: 2px solid #333333;
-} */
+}
 
 .tarjeta,
 .tarjeta-de-mokepon {
-  @apply flex gap-6;
+  @apply flex gap-6 ;
+}
+
+.imagen-tarjeta {
+  width: 120px;
 }
 
 .tarjetas-ataques {
-  @apply flex;
+  @apply flex gap-6;
 }
 
-#boton-mascota {
+#boton-mascota, .boton-atras, .boton-reiniciar {
   @apply bg-purple-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300;
 }
 
-#seleccionar-ataque {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .boton-de-ataque {
   @apply w-40 bg-purple-300 text-purple-700 font-bold py-2 px-4 rounded-full flex items-center justify-center hover:bg-purple-400 transition-all;
@@ -69,17 +69,7 @@ h1 {
   @apply flex flex-col bg-purple-300 rounded-lg p-4 text-center text-white font-semibold mb-6;
 }
 
-#boton-reiniciar {
-  border: none;
-  background-color: #3f37b0;
-  color: white;
-  padding: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-  border-radius: 20px;
-  font-family: Poppins;
-  font-weight: 500;
-}
+
 
 .ataques {
   @apply flex justify-center space-x-12 text-center;

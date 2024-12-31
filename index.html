@@ -5,57 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetWars 👌</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="output.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
     <section id="seleccionar-mascota" class="seccion">
-      <h1>PetWars</h1>
-
-      <h2 class="subtitulo">Elige a tu compañero de batalla</h2>
-
-      <div class="tarjeta">
-        <input type="radio" name="mascota" id="michu" class="hidden peer" />
-        <label class="tarjeta-de-mokepon" for="michu">
-          <img src="./assets/michu.png" alt="Imagen de Michu, un gatico" />
-        </label>
-
-        <input type="radio" name="mascota" id="firulais" class="hidden peer" />
-        <label class="tarjeta-de-mokepon" for="firulais">
-          <img
-            src="./assets/firulais.png"
-            alt="Imagen de Firulais, un perrito"
-          />
-        </label>
-
-        <input type="radio" name="mascota" id="manchas" class="hidden peer" />
-        <label class="tarjeta-de-mokepon" for="manchas">
-          <img
-            src="./assets/manchas.png"
-            alt="Imagen de Manchas, una vaquita"
-          />
-        </label>
+      <div>
+        <h1>PetWars</h1>
+        <h2 class="subtitulo">Elige a tu compañero de batalla</h2>
       </div>
-      <div class="mb-8">
-        <label for="nombre-mascota" class="block text-lg text-gray-600 mb-2"
-          >Ponle un nombre:</label
-        >
-        <input
-          type="text"
-          id="nombre-mascota"
-          placeholder="Ej. Rayo, Luna, Max"
-          class="w-72 px-4 py-2 border-2 border-purple-300 rounded-lg focus:outline-none focus:border-purple-500 transition-all duration-300"
-        />
+      <div class="row-span-2">
+        <div class="tarjeta">
+          <input type="radio" name="mascota" id="gatico" class="hidden" />
+          <label class="tarjeta-de-mokepon" for="gatico">
+            <img
+              class="imagen-tarjeta"
+              src="./assets/gatico.svg"
+              alt="Imagen de un gatico"
+            />
+          </label>
+
+          <input type="radio" name="mascota" id="perrito" class="hidden" />
+          <label class="tarjeta-de-mokepon" for="perrito">
+            <img
+              class="imagen-tarjeta"
+              src="./assets/perrito.svg"
+              alt="Imagen de un perrito"
+            />
+          </label>
+
+          <input type="radio" name="mascota" id="pinguino" class="hidden" />
+          <label class="tarjeta-de-mokepon" for="pinguino">
+            <img
+              class="imagen-tarjeta"
+              src="./assets/pinguino.svg"
+              alt="Imagen de un pinguino"
+            />
+          </label>
+        </div>
+        <div class="mb-8">
+          <label for="nombre-mascota" class="block text-lg text-gray-600 mb-2"
+            >Ponle un nombre:</label
+          >
+          <input
+            type="text"
+            id="nombre-mascota"
+            placeholder="Ej. Rayo, Luna, Max"
+            class="w-72 px-4 py-2 border-2 border-purple-300 rounded-lg focus:outline-none focus:border-purple-500 transition-all duration-300"
+          />
+        </div>
       </div>
 
       <button id="boton-mascota">¡Listo para la batalla!</button>
     </section>
 
     <section id="seleccionar-ataque" class="seccion">
-      <h1>PetWars</h1>
+      <div class="flex justify-start w-full mb-2">
+        <button id="boton-atras" class="boton-atras">Atrás</button>
+      </div>
 
-      <h2 class="subtitulo">Elige tu ataque:</h2>
+      <div>
+        <h1>PetWars</h1>
+
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+      </div>
 
       <div class="tarjetas-ataques">
         <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
@@ -79,7 +94,9 @@
           <div id="ataques-del-enemigo"></div>
         </div>
       </div>
-      <button id="boton-reiniciar" class="hidden">Volver a jugar</button>
+      <button id="boton-reiniciar" class="boton-reiniciar hidden">
+        Volver a jugar
+      </button>
     </section>
 
     <script type="module" src="js/app.js"></script>

@@ -12,6 +12,7 @@ export function mostrarSeccion(seccion) {
   secciones.forEach((sec) => {
     if (sec.id === seccion) {
       sec.style.display = "flex";
+      sec.style.flexDirection = "column";
     } else {
       sec.style.display = "none";
     }
