@@ -66,6 +66,24 @@
         <button id="boton-atras" class="boton-atras">Atrás</button>
       </div>
 
+      <div class="ataques">
+        <div class="vidas-mascota">
+          <div class="contenedor-nombre-mascota">
+            <h6>Tú</h6>
+            <p id="mascota-jugador" class="nombre-mascota"></p>
+            <p id="vidas-jugador" class="vidas">❤️ 3</p>
+          </div>
+        </div>
+
+        <div class="vidas-mascota">
+          <div class="contenedor-nombre-mascota">
+            <h6>Computadora</h6>
+            <p id="mascota-enemigo" class="nombre-mascota"></p>
+            <p id="vidas-enemigo" class="vidas">❤️ 3</p>
+          </div>
+        </div>
+      </div>
+
       <div>
         <h1>PetWars</h1>
 
@@ -78,27 +96,38 @@
         <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button>
       </div>
 
-      <div id="mensajes">
-        <p id="resultado">¡Mucha suerte!</p>
-      </div>
-      <div class="ataques">
-        <div class="ataques-jugador">
-          <p id="vidas-jugador" class="vidas">3</p>
-          <p id="mascota-jugador" class="nombre-mascota"></p>
-          <div id="ataques-del-jugador"></div>
+      <div id="ataque-seleccionado" class="mt-6 text-lg font-semibold">
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg mb-4 flex flex-col justify-center"
+        >
+          <h3 class="text-2xl font-semibold mb-4">Resultado de la batalla</h3>
+          <div class="flex justify-around">
+            <div>
+              <p class="text-base font-bold">Tú</p>
+              <div
+                id="ataques-del-jugador"
+                class="bg-violet-200 rounded-full w-12 h-12 flex items-center justify-center"
+              ></div>
+            </div>
+            <div class="flex flex-col">
+              <p class="text-base font-bold">Computadora</p>
+              <div
+                id="ataques-del-enemigo"
+                class="bg-blue-200 rounded-full w-12 h-12 flex items-center justify-center"
+              ></div>
+            </div>
+          </div>
+          <div id="mensajes">
+            <p id="resultado">¡Mucha suerte!</p>
+          </div>
         </div>
+        
+      </div>
 
-        <div class="ataques-enemigo">
-          <p id="vidas-enemigo" class="vidas">3</p>
-          <p id="mascota-enemigo" class="nombre"></p>
-          <div id="ataques-del-enemigo"></div>
-        </div>
-      </div>
       <button id="boton-reiniciar" class="boton-reiniciar hidden">
         Volver a jugar
       </button>
     </section>
-
     <script type="module" src="js/app.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@ export function aleatorio(min, max) {
 
 export function reiniciarJuego() {
   mostrarSeccion("seleccionar-mascota");
-  localStorage.removeItem("mostrarSeccion")
+  localStorage.removeItem("mostrarSeccion");
 }
 
 export function mostrarSeccion(seccion) {
@@ -33,6 +33,8 @@ export function restaurarSeccion() {
   const seccion = obtenerSeccion();
   if (seccion) {
     mostrarSeccion(seccion);
+  }else {
+    mostrarSeccion("seleccionar-mascota");
   }
 }
 
